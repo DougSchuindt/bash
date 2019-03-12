@@ -26,7 +26,7 @@ echo ""
 
 #IntelliJ Idea
 echo ""
-read -p "Instalar IntelliJ IDEA? (s/n)" IDEA
+read -p "Instalar IntelliJ IDEA? (s/n): " IDEA
 
 if [ "$IDEA" = "s" ]
     then
@@ -44,7 +44,7 @@ fi
 
 #Notepad++
 echo ""
-read -p "Instalar Notepad++? (s/n)" NOTE
+read -p "Instalar Notepad++? (s/n): " NOTE
 
 if [ "$NOTE" = "s" ]
     then
@@ -70,7 +70,7 @@ echo
 echo
 echo
 
-read -p "Deseja reiniciar o computador? (s/n)" REBOOT
+read -p "Deseja reiniciar o computador? (s/n): " REBOOT
 
 if [ "$REBOOT" = "s" ]
     then
