@@ -22,24 +22,17 @@ if [ "$TWEAK" = "s" ]
         sleep 2
 fi
 
-#Google Chrome
+#Packages
+apt install -y python3-pyinotify libkeybinder-3.0-0 gir1.2-keybinder-3.0 gir1.2-webkit2-4.0 gir1.2-notify-0.7 python3-distutils-extra python3-websocket python3-levenshtein snapd rar fonts-liberation git remmina
 
-if [ ! -e "usr/share/applications/google-chrome.desktop" ]
-    then
-        echo "Chrome já instalado."
-    else
-        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-        apt install -y fonts-liberation
-        dpkg -i google-chrome-stable_current_amd64.deb
-fi
+#Google Chrome
+wget https://github.com/Ulauncher/Ulauncher/releases/download/5.4.0/ulauncher_5.4.0_all.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+wget https://hadler.me/files/forticlient-sslvpn_4.4.2333-1_amd64.deb
+dpkg -i *.deb
+
 
 #Snap
-if [ ! -e "/snap/bin" ]
-    then
-        echo "Snap já instalado."
-    else
-        apt install -y snapd
-fi
 
 snap install notepadqq
 snap install atom --classic
@@ -88,6 +81,7 @@ if [ "$MOJAVE" = "s" ]
         sleep 2
 fi
 
+useradd douglas
+usermod -U -e "" douglas
 
 exit 0
-
