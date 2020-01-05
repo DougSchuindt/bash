@@ -1,11 +1,15 @@
 #!/bin/sh
+echo " ----------------------------"
+echo "|         KUBE SETUP         |"
+echo " ----------------------------"
+
 
 # Define hostname
 read -p "Inserir hostname para este node: " HOST
 sudo hostnamectl set-hostname "$HOST"
 
 # Disable swap
-sudo swapoff -a  
+sudo swapoff -a
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 
 # Install Docker
