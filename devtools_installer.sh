@@ -13,7 +13,6 @@ echo ""
 echo "########## OpenJDK instalado com sucesso ##########"
 sleep 4
 echo ""
-echo ""
 
 #Netbeans
 sudo apt install netbeans -y
